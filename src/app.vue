@@ -16,7 +16,12 @@
     </f7-panel>
 
     <!-- Main View -->
-    <f7-view id="main-view" url="/" main></f7-view>
+    <f7-view id="main-view" url="/" main>
+      <f7-toolbar tabbar>
+        <f7-link route-tab-id="tab1" href="/tabs/0">Tab1</f7-link>
+        <f7-link route-tab-id="tab2" href="/tabs/tab2/0">Tab2</f7-link>
+      </f7-toolbar>
+    </f7-view>
 
     <!-- Popup -->
     <f7-popup id="popup">
@@ -71,7 +76,7 @@ export default {
       f7params: {
         id: 'io.framework7.testapp', // App bundle ID
         name: 'Framework7', // App name
-        theme: 'auto', // Automatic theme detection
+        theme: 'ios',
         // App routes
         routes: routes,
       },

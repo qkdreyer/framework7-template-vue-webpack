@@ -7,10 +7,30 @@ import NotFoundPage from './pages/not-found.vue';
 import PanelLeftPage from './pages/panel-left.vue';
 import PanelRightPage from './pages/panel-right.vue';
 
+import TabsPage from './pages/tabs.vue';
+import Tab1Page from './pages/tab1.vue';
+import Tab2Page from './pages/tab2.vue';
+
 export default [
   {
     path: '/',
     component: HomePage,
+  },
+  {
+    path: '/tabs',
+    component: TabsPage,
+    tabs: [
+      {
+        path: '/:id?',
+        id: 'tab1',
+        component: Tab1Page,
+      },
+      {
+        path: '/tab2/:id?',
+        id: 'tab2',
+        component: Tab2Page,
+      },
+    ],
   },
   {
     path: '/panel-left/',

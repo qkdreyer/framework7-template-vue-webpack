@@ -50,5 +50,9 @@
   </f7-page>
 </template>
 <script>
-export default {}
+export default {
+  mounted() {
+    // this.$f7router.navigate('/tabs/');
+  }
+}
 </script>
