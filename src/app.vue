@@ -16,10 +16,10 @@
     </f7-panel>
 
     <!-- Main View -->
-    <f7-view id="main-view" url="/" main>
+    <f7-view id="main-view" url="/tab1/" main @tab:hide="onTabHide">
       <f7-toolbar tabbar>
-        <f7-link route-tab-id="tab1" href="/tabs/0">Tab1</f7-link>
-        <f7-link route-tab-id="tab2" href="/tabs/tab2/0">Tab2</f7-link>
+        <f7-link route-tab-id="tab1" href="/tab1/">Tab1</f7-link>
+        <f7-link route-tab-id="tab2" href="/tab2/">Tab2</f7-link>
       </f7-toolbar>
     </f7-view>
 
@@ -67,7 +67,7 @@
 
 <script>
 // Import Routes
-import routes from './routes.js'
+import routes from './routes.js';
 
 export default {
   data() {
@@ -80,7 +80,13 @@ export default {
         // App routes
         routes: routes,
       },
-    }
-  }
-}
+    };
+  },
+  methods: {
+    onTabHide() {
+      console.log('clearPreviousHistory');
+      this.$f7.views.current.router.clearPreviousHistory();
+    },
+  },
+};
 </script>

@@ -52,7 +52,7 @@
 <script>
 export default {
   mounted() {
-    // this.$f7router.navigate('/tabs/');
+    this.$f7router.navigate('/tab1/');
   }
 }
 </script>

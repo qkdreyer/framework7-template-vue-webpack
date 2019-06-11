@@ -17,11 +17,11 @@ export default [
     component: HomePage,
   },
   {
-    path: '/tabs',
+    path: '/',
     component: TabsPage,
     tabs: [
       {
-        path: '/:id?',
+        path: '/tab1/:id?',
         id: 'tab1',
         component: Tab1Page,
       },
